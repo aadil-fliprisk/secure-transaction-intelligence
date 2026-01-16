@@ -76,18 +76,6 @@ const About = () => {
           ))}
         </div>
 
-        {/* Stealth mode note */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-16 text-center"
-        >
-          <p className="text-sm text-muted-foreground/70 italic">
-            Technical and product details are private until launch. 
-            We're collaborating with select early partners aligned with long-term crypto infrastructure.
-          </p>
-        </motion.div>
       </div>
     </section>
   );

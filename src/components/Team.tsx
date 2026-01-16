@@ -1,22 +1,23 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Linkedin } from "lucide-react";
+import aadilImg from "@/assets/aadil.jpg";
+import praveenImg from "@/assets/praveen.png";
 
 const team = [
   {
     name: "Aadil Baeg",
     role: "Co-Founder",
-    company: "Ex-Coinbase",
+    company: "Coinbase",
     description: "Software Engineer specializing in crypto backend systems, risk infrastructure, and secure large-scale services powering institutional-grade products.",
-    initial: "AB"
+    image: aadilImg
   },
   {
     name: "Praveen Fulera",
     role: "Co-Founder", 
-    company: "Ex-Google",
+    company: "Google",
     description: "Software Engineer specializing in search infrastructure, distributed systems, and high-reliability backend engineering.",
-    initial: "PF"
+    image: praveenImg
   }
 ];
 
@@ -52,11 +53,13 @@ const Team = () => {
               className="group relative p-8 rounded-2xl bg-gradient-card border border-border/50 hover:border-primary/30 transition-all duration-500 shadow-card"
             >
               <div className="flex items-start gap-5">
-                {/* Avatar with initials */}
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center">
-                  <span className="font-display text-xl font-bold text-primary">
-                    {member.initial}
-                  </span>
+                {/* Avatar with photo */}
+                <div className="flex-shrink-0 w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 <div className="flex-1">
